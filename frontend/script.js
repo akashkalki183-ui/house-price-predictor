@@ -1,7 +1,7 @@
 // script.js
 // Website logic and interaction with backend
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://house-price-predictor-2-0xkl.onrender.com';
 
 // ==================
 // MAIN FUNCTIONS
