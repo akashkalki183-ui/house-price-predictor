@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🏠 House Price Predictor</h1>
+            <p>Enter house details and our AI will predict the price!</p>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <h2>📝 Enter House Details</h2>
+            
+            <div class="form-group">
+                <label for="sqft">Square Feet:</label>
+                <input 
+                    type="number" 
+                    id="sqft" 
+                    placeholder="Enter Square Feet"
+                    min="100"
+                    max="10000"
+                >
+                <small>Typical range: 1000 - 5000 sq ft</small>
+            </div>
+
+            <div class="form-group">
+                <label for="bedrooms">Number of Bedrooms:</label>
+                <input 
+                    type="number" 
+                    id="bedrooms" 
+                    placeholder="Enter Bedrooms"
+                    min="1"
+                    max="10"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="bathrooms">Number of Bathrooms:</label>
+                <input 
+                    type="number" 
+                    id="bathrooms" 
+                    placeholder="Enter Bathrooms"
+                    step="0.5"
+                    min="1"
+                    max="10"
+                >
+            </div>
+
+            <button onclick="predictPrice()" class="btn-predict">
+                🔮 Predict Price
+            </button>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Analyzing house data...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error" class="error-message" style="display: none;"></div>
+
+        <!-- Result Section -->
+        <div id="result" class="result-section" style="display: none;">
+            <h2>✅ Prediction Result</h2>
+            <div class="result-box">
+                <p>Estimated House Price:</p>
+                <h3 id="predictedPrice" class="price">$0</h3>
+                <div class="input-details">
+                    <p id="inputDetails"></p>
+                </div>
+            </div>
+            <button onclick="clearResult()" class="btn-clear">Clear & Try Again</button>
+        </div>
+
+        <!-- History Section -->
+        <div class="history-section">
+            <h2>📋 Prediction History</h2>
+            <div class="history-buttons">
+                <button onclick="loadHistory()" class="btn-history">📂 Load History</button>
+                <button onclick="clearAllHistory()" class="btn-delete">🗑️ Clear All</button>
+            </div>
+            <div id="historyList" class="history-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
