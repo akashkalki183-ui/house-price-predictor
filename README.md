@@ -75,3 +75,15 @@ python app.py
 cd frontend
 python -m http.server 8000
 
+🌐 Deployment
+
+Backend – Render
+- Flask backend deployed as a Web Service
+- ML model and prediction API hosted on Render
+
+Frontend – Render
+- Frontend deployed as a Static Site
+- Frontend connected to the deployed backend API
+
+Live Demo:
+https://house-price-predictor-3-x3y8.onrender.com
