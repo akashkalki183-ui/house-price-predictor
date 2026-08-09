@@ -25,7 +25,7 @@ Simply enter house details (Square Feet, Bedrooms, Bathrooms) and our AI will pr
 - SQLite (Database)
 
 ## 📂 Project Structure
-'''text
+```
 house-price-predictor/
 ├── frontend/
 │   ├── index.html
@@ -39,7 +39,7 @@ house-price-predictor/
 ├── predictions.db
 ├── .gitignore
 └── README.md
-'''
+```
 ## 🚀 Run Locally
 
 ### Requirements
